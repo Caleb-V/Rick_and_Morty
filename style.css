@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Roboto', sans-serif; 
     margin: 0;
@@ -12,7 +16,7 @@ body {
     display: flex;
     align-items: center;
     overflow: visible;
-    position: relative; /* Asegura que el dropdown se posicione bien */
+    position: relative; 
     z-index: 10;
 }
 
@@ -67,7 +71,7 @@ body {
     font-size: 3rem;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra sutil para que el texto resalte */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
   }  
   
   
@@ -84,11 +88,11 @@ body {
   #characterFilter {
     background-color: #000000;
     color: white;
-    max-width: 200px; /* o el valor que mejor se adapte */
+    max-width: 200px; 
     width: 100%;
-    overflow-x: hidden; /* permite desplazamiento horizontal */
-    white-space: nowrap; /* evita que el texto se divida en varias líneas */
-    text-overflow: ellipsis; /* muestra puntos suspensivos si el texto es muy largo */
+    overflow-x: hidden; 
+    white-space: nowrap; 
+    text-overflow: ellipsis; 
   }
   
   
@@ -103,7 +107,7 @@ body {
 
   .filter-container {
     display: flex;
-    flex-wrap: wrap; /* Para que los elementos se bajen si no caben */
+    flex-wrap: wrap; 
     margin: 1rem auto 0 auto;
     margin-top: 1rem;
     align-items: center;
@@ -162,11 +166,6 @@ body {
     font-size: 0.95rem;
     color: #777; 
   }
-  
-  footer {
-    background-color: #333; 
-    color: white
-  }
 
   footer {
     background-color: rgba(255, 255, 255, 0.096);
@@ -179,9 +178,9 @@ body {
 
   @media (max-width: 1024px) {
     .cards-container {
-      grid-template-columns: repeat(3, 1fr); /* 3 tarjetas por fila */
+      grid-template-columns: repeat(3, 1fr); 
     }
-    
+
     #characterFilter,
     #refreshButton {
       width: 100%;
@@ -204,18 +203,6 @@ body {
       }
   }
 
-  @media (max-width: 768px) {
-    .card {
-      width: 90%;
-    }
-    #characterFilter,
-    #refreshButton {
-      width: 100%;
-      box-sizing: border-box;
-      text-align: center;
-    }
-  }
-
   @media (max-width: 600px) {
     .filter-container {
       flex-direction: column;
@@ -229,6 +216,7 @@ body {
       box-sizing: border-box;
       text-align: center;
     }
+    
   }
 
   @media (max-width: 768px) {
@@ -248,17 +236,28 @@ body {
     }
 
     .card {
-        width: 55%; /* Ligeramente más chica pero sin perder legibilidad */
+        width: 85%; 
         padding: 1rem;
       }
+
+    .logo-img{
+    height: 35px;
+    width: auto;
+    }
+    #characterFilter,
+    #refreshButton {
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+    }
   }
   
   @media (max-width: 480px) {
     .main-title {
-      font-size: 2.5rem; /* Reduce el tamaño del título en móviles muy pequeños */
+      font-size: 2.5rem; 
     }
     
     #characterFilter {
-      font-size: 0.9rem; /* Reduce el tamaño de fuente */
+      font-size: 0.9rem; 
     }
   }
