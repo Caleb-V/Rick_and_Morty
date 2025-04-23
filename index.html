@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rick and Morty Cards</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <nav class="nav container">
+          <div class="nav_logo">
+            <img src="./img/logo1-removebg-preview.png" alt="Logo" class="logo-img">
+          </div>
+        </nav>
+      
+        <div class="header-content">
+          <h1 class="main-title">Rick and Morty</h1>
+        </div>
+      </header>      
+           
+
+  <main>
+    <div class="filter-container">
+        <label for="characterFilter">Filtrar personaje:</label>
+        <select id="characterFilter">
+          <option value="all">Todos</option>
+        </select>
+        <button id="refreshButton">🔁 Cambiar personajes</button>
+      </div>
+    <section class="cards-container" id="cardsContainer"></section>
+  </main>
+
+  <footer>
+    <p>Desarrollado por: Caleb Vera Amaya</p>
+    <p>Redes: <a href="#">GitHub</a> | <a href="#">Instagram</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

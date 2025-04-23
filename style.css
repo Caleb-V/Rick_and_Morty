@@ -1,0 +1,264 @@
+body {
+    font-family: 'Roboto', sans-serif; 
+    margin: 0;
+    background-color: #000000; 
+    color: #333; 
+    overflow-x: hidden;
+  }
+
+  .nav{
+    --padding-container:0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow: visible;
+    position: relative; /* Asegura que el dropdown se posicione bien */
+    z-index: 10;
+}
+
+   .nav_logo {
+    display: flex;
+    align-items: center;
+    gap: 2px; 
+  }
+  
+   .logo-img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    padding-left: 20px;
+  }
+  
+  .header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    width: 100%;
+    padding: 0 1rem;
+  }
+  
+  .main-title {
+    font-size: 4rem;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  }
+  
+  
+  header {
+    background: url('./img/imagen2.jpg') center/cover no-repeat;
+    height: 100vh;
+    min-height: 300px;
+    max-height: 500px;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    color: white;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
+  }
+  
+  
+  header h1 {
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra sutil para que el texto resalte */
+  }  
+  
+  
+  #characterFilter, #refreshButton {
+    padding: 0.75rem 1.5rem; 
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #characterFilter {
+    background-color: #000000;
+    color: white;
+    max-width: 200px; /* o el valor que mejor se adapte */
+    width: 100%;
+    overflow-x: hidden; /* permite desplazamiento horizontal */
+    white-space: nowrap; /* evita que el texto se divida en varias líneas */
+    text-overflow: ellipsis; /* muestra puntos suspensivos si el texto es muy largo */
+  }
+  
+  
+  #refreshButton {
+    background-color: #000000; 
+    color: white;
+  }
+  
+  #refreshButton:hover, #characterFilter:hover {
+    background-color: #2c2a30; 
+  }
+
+  .filter-container {
+    display: flex;
+    flex-wrap: wrap; /* Para que los elementos se bajen si no caben */
+    margin: 1rem auto 0 auto;
+    margin-top: 1rem;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.95rem;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.8rem 1.2rem;
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    width: fit-content;
+    max-width: 90%;
+  }
+
+  .filter {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem; 
+    padding: 2rem;
+  }
+  
+  .card {
+    background-color: rgba(255, 255, 255, 0.096);
+    border-radius: 12px; 
+    width: calc(21% - 1.5rem);
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2); 
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover; 
+  }
+  
+  .card h3 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.596);
+  }
+  
+  .card p {
+    font-size: 0.95rem;
+    color: #777; 
+  }
+  
+  footer {
+    background-color: #333; 
+    color: white
+  }
+
+  footer {
+    background-color: rgba(255, 255, 255, 0.096);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+  }
+
+
+  @media (max-width: 1024px) {
+    .cards-container {
+      grid-template-columns: repeat(3, 1fr); /* 3 tarjetas por fila */
+    }
+    
+    #characterFilter,
+    #refreshButton {
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    .filter-container {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+      }
+      
+      #characterFilter {
+        width: 100%;
+        max-width: 100%;
+      }
+      
+      #refreshButton {
+        width: 100%;
+      }
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      width: 90%;
+    }
+    #characterFilter,
+    #refreshButton {
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .filter-container {
+      flex-direction: column;
+      align-items: stretch;
+      width: 90%;
+    }
+  
+    #characterFilter,
+    #refreshButton {
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .filter-container {
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+    }
+    
+    #characterFilter {
+      width: 100%;
+      max-width: 100%;
+    }
+    
+    #refreshButton {
+      width: 100%;
+    }
+
+    .card {
+        width: 55%; /* Ligeramente más chica pero sin perder legibilidad */
+        padding: 1rem;
+      }
+  }
+  
+  @media (max-width: 480px) {
+    .main-title {
+      font-size: 2.5rem; /* Reduce el tamaño del título en móviles muy pequeños */
+    }
+    
+    #characterFilter {
+      font-size: 0.9rem; /* Reduce el tamaño de fuente */
+    }
+  }
