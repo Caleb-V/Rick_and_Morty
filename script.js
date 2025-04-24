@@ -31,11 +31,15 @@ function populateCards(characters) {
       <div class="card">
         <img src="${character.image}" alt="${character.name}">
         <h3>${character.name}</h3>
-        <p>${character.status} - ${character.species}</p>
+        <p><strong>Estado:</strong> ${character.status}</p>
+        <p><strong>Especie:</strong> ${character.species}</p>
+        <p><strong>Género:</strong> ${character.gender}</p>
+        <p><strong>Ubicación:</strong> ${character.location.name}</p>
       </div>
     `;
   });
 }
+
 
 function populateSelect(characters) {
   characters.forEach(character => {
